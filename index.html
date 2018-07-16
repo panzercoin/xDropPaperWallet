@@ -271,8 +271,6 @@ function generateWallet() {
 
 
 function generate(){
-	el('orgname').innerHTML = el('wallet-name').value || el('orgname').innerHTML;
-	el('purpose').innerHTML = el('wallet-desc').value || el('purpose').innerHTML;
 	generateWallet();
 	_form.style.display = 'none';
 	_wallet.style.display = 'block';
