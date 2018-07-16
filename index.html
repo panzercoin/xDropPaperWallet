@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>XUN Paper Wallet Generator</title>
+	<title>xDrop Paper Wallet Generator</title>
 	<script type="text/javascript" src="./numbers.js"></script>
 	<script type="text/javascript" src="./asm.js"></script>
 	<script type="text/javascript" src="./cnUtil.js"></script>
@@ -93,8 +93,8 @@
 	}
 </style>
 
-<a href="https://UltraNote.org" style="position: fixed; top:10px; left: 10px; z-index: 100;" class="btn btn-default">
-	UltraNote.org
+<a href="https://xDrop.io" style="position: fixed; top:10px; left: 10px; z-index: 100;" class="btn btn-default">
+	xDrop.io
 </a>
 
 <a href="https://bitbucket.org/nesterow/XUN-paperwallet" target="_blank" style="position: fixed; top:10px; right: 10px; z-index: 100;" class="btn btn-primary">
@@ -106,24 +106,13 @@
 		<img width="70" src="backgrounds/XUN.png">
 	</h1>
 	<small>
-		UltraNote PAPER WALLET GENERATOR
+		DROP PAPER WALLET GENERATOR
 	</small>
 </div>
 
 <center>
 
 <div class="theform" id="_form">
-	<h3>WALLET DESCRIPTION<br>
-		<small>
-			(optional)
-		</small>
-	</h3>
-	<input class="form-control input-lg" type="text" id="wallet-name" placeholder="organization / your name">
-	<small>Examples: "John Smith", "Funny Bears ltd.",  "Sith Church"</small>
-	<hr>
-	<input class="form-control input-lg" type="text" id="wallet-desc" placeholder="wallet purpose">
-	<small>Examples: "Donate to the Sith Church.", "My UltraNote account for savings"</small>
-	<hr>
 	<button id="generate" class="btn btn-lg btn-warning">
 		GENERATE WALLET
 	</button>
@@ -135,7 +124,6 @@
 
 
 <center id="_wallet">
-
 	<div class="text-wallet">
 		<div class="col-xs-6">
 			<h5>PRIVATE KEY</h5>
@@ -168,18 +156,13 @@
 				
 			</div>
 			<div class="base64" id="private-key">
-				Xun3opQPgvvH5Djku417b5Mgc6VqqURkeP<br>
-				7tQxN5Cy9D9Yb3NDGXUVLEbmYHoDMxfJdheHxz<br>
-				JxdKh3vjy8BDHEFBRW6Mfa1oRUuWCTyQqoY<br>
-				ApsBuWTurxGUZf5VaKKrJMRWMEux4o4NmDH<br>
-				FdxP9CDKS3A17JWX57TpmaH75YpwfChUZ35Nm2TVfAxD
 			</div>
 			<div class="note">
 				<p class="name">
-					WARNING!
+					Warning
 				</p>
 				<p class="desc">
-					Never show this piece to anyone! Never expose this QR code in public places!
+					Keep this very private
 				</p>
 			</div>
 		</div>
@@ -189,14 +172,14 @@
 				
 			</div>
 			<div class="base64" style="height: 55px;" id="public-address">
-				Xun3opQPgvvH5Djku417b5Mgc6VqqURkeP7tQxN5Cy9D9Yb3NDGXUVLEbmYHoDMxfJdheHxzJxdKh3vjy8BDHEFB6Yy3UpXo1G
+				
 			</div>
 			<div class="note">
 				<p class="name" id="orgname">
-					UltraNote Wallet
+					xDrop Wallet
 				</p>
 				<p class="desc" id="purpose">
-					UltraNote address for payments and messages.
+					DROP address for payments and messages.
 				</p>
 			</div>
 		</div>
@@ -208,7 +191,7 @@
 	<div class="col-sm-6 col-sm-offset-3">
 		<h4>ABOUT THE PAPER WALLET</h4>
 		<p>
-			<b>Paper Wallet Generator</b> is a tool that helps getting a UltraNote(XUN) address. After generating a wallet you can start receiving payments without installing any software. 
+			<b>Paper Wallet Generator</b> is a tool that helps getting an xDrop (DROP) address. After generating a wallet you can start receiving payments without installing any software. 
 		</p>
 		<p>
 			Paper Wallet consists of two parts: <u>Private Key</u> and <u>Payment Address</u>
@@ -218,7 +201,7 @@
 		</p>
 		<p>
 			<u>Private Key</u> is what gives you administrative access to your money. Keep it somewhere safe. <br>
-			You can access your wallet by importing private key into the UltraNote desktop application. ** Don't forget to backup current wallet before importing.  
+			You can access your wallet by importing private key into the xDrop GUI Wallet. ** Don't forget to backup current wallet before importing.  
 		</p>
 		<br>
 		<h4>HOW TO USE</h4>
@@ -258,11 +241,11 @@ function break38(line){
 
 function generateWallet() {
 	var Config = {
-	    coinUnitPlaces: 10,
-	    coinSymbol: 'XUN',
-	    coinName: 'UltraNote',
-	    coinUriPrefix: 'unote:',
-	    addressPrefix: 0x1a2638
+	    coinUnitPlaces: 7,
+	    coinSymbol: 'DROP',
+	    coinName: 'xDrop',
+	    coinUriPrefix: 'xdrop:',
+	    addressPrefix: 0x49
 	};
 	var cnUtil = cnUtilGen(Config);
 
