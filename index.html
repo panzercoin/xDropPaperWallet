@@ -255,7 +255,7 @@ function generateWallet() {
 	pub = el('public_address').value = cnUtil.pubkeys_to_string(keys.spend.pub, keys.view.pub);
 	el('public-address').innerHTML = break38(pub);
 	var pub_qr = qrcode(12, 'L'); 
-	pub_qr.addData('dnote:'+pub);
+	pub_qr.addData('xdrop:'+pub);
 	pub_qr.make();
 	el('public-address-qr').innerHTML = pub_qr.createImgTag(3);
 
